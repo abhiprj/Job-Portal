@@ -9,7 +9,7 @@ import {
 // Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("http://localhost:1234/Applicant/create", userData)
+    .post("https://job-portal-six-liard.vercel.app/Applicant/create", userData)
     .then(res => history.push("")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
@@ -22,7 +22,7 @@ export const registerUser = (userData, history) => dispatch => {
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
-    .post("http://localhost:1234/Applicant/login", userData)
+    .post("https://job-portal-six-liard.vercel.app/Applicant/login", userData)
     .then(res => {
       // Save to localStorage
       // Set token to localStorage
